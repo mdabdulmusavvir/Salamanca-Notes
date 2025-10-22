@@ -1,56 +1,88 @@
 # 🧠 Salamanca Notes  
-### *Because doctors deserve fewer words and more sense.*
-
-![Made with ❤️ at UNT](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20at-UNT-green?style=for-the-badge)
-![Built with Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red?style=for-the-badge)
-![HackWell 2025](https://img.shields.io/badge/HackWell%202025-Health%20Informatics-blue?style=for-the-badge)
+### Because doctors deserve fewer words and more sense.
 
 ---
 
-## 🚀 What is this?
+## 1️⃣ Context
+Doctors spend a crazy amount of time typing up patient notes — sometimes more than they spend with actual patients.  
+In Texas and many other regions, a large Hispanic population also means there’s a **language gap** between Spanish-speaking patients and English-speaking doctors.  
 
-**Salamanca Notes** is your local AI sidekick for summarizing long, messy **Electronic Health Records (EHRs)** into clean, structured **SOAP notes** — *without ever sending data to the cloud*.  
+That’s a lot of chaos in communication.  
+So… we decided to fix it.  
 
-Built for hackathons, hospitals, and heroic students pulling all-nighters.  
-It runs offline, keeps patient info private, and produces professional-grade summaries in seconds.  
-
-🩺 **S**ubjective  
-🧾 **O**bjective  
-💬 **A**ssessment  
-📋 **P**lan  
-
-That’s it. Four sections. One calm, concise summary.  
+Enter **Salamanca Notes** — your friendly neighborhood AI scribe.
 
 ---
 
-## 🧩 How it works
+## 2️⃣ Vision
+Imagine this:  
+A doctor talks. The AI listens — in Spanish or English.  
+And *boom*, it creates a clean, professional **SOAP note** (Subjective, Objective, Assessment, Plan).  
 
-It runs **locally** using open-source models from Hugging Face:  
+No endless typing.  
+No “wait, what did they say?”  
+Just quick, clean summaries, all done **locally** — no cloud, no patient data leaks.
 
-| Model | Role | Personality |
-|--------|------|-------------|
-| 🧠 `google/flan-t5-base` | Instruction-following model | “Yes doc, here’s your structured SOAP note.” |
-| 💊 `facebook/bart-large-cnn` | Summarizer | “Fast, neat, and occasionally improvises.” |
-
-No API keys, no OpenAI bills, no cloud dependencies.  
-Your data stays on your machine — the way HIPAA intended.  
+Our goal?  
+Make healthcare documentation effortless, accurate, and inclusive.
 
 ---
 
-## ⚙️ Setup (Windows)
+## 3️⃣ What We’ve Done So Far
+✅ Built a Streamlit app that converts raw EHR text into structured SOAP notes.  
+✅ Integrated local summarization models (**FLAN-T5** and **BART**) — both open-source.  
+✅ Added **Whisper (speech-to-text)** for Spanish audio input.  
+✅ Added **Helsinki-NLP translation** for Spanish → English conversion.  
+✅ Kept everything **offline** for privacy.  
+✅ Tested it on sample audio and mock medical records.  
 
-```powershell
-# 1️⃣ Open PowerShell in your project folder
-cd "C:\Projects\SalamancaNotes"
+Basically, we made AI the intern who never complains.
 
-# 2️⃣ Create & activate a virtual environment
+---
+
+## 4️⃣ How It Works (In Simple Words)
+🎙️ Speak in Spanish or upload an audio file.  
+🧠 Whisper converts speech → Spanish text.  
+🌐 Translator converts Spanish → English.  
+📋 Summarizer builds a neat SOAP note.  
+💾 Everything stays on your laptop — zero cloud dependency.  
+
+You talk → it listens → you get a professional clinical note before your coffee gets cold.
+
+---
+
+## 5️⃣ Future Impact
+When we ship this to production, **Salamanca Notes** could:
+- ⚡ Save doctors hours of typing every week  
+- 🗣️ Break language barriers between patients and doctors  
+- 🔒 Protect patient privacy (offline, local models)  
+- 🌎 Support multilingual healthcare — not just Spanish  
+
+It’s not just a hackathon project. It’s a step toward **human-centered AI for healthcare**.
+
+---
+
+## 6️⃣ Tech Stack
+| Layer | Tool | Why |
+|-------|------|-----|
+| 🎨 UI | Streamlit | Simple and fast for prototyping |
+| 🧠 NLP | Hugging Face Transformers | Open-source power |
+| 🗣️ Speech-to-Text | Faster-Whisper | Accurate and local |
+| 🌐 Translation | Helsinki-NLP (es→en) | Lightweight and offline |
+| ⚙️ Backend | Python 3.11 | Because of course |
+| 🧾 Summary Models | FLAN-T5 / BART | Great for structured outputs |
+
+---
+
+## 7️⃣ How to Run
+```bash
+# Create and activate your venv
 python -m venv .venv
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\activate  # (Windows)
+# or source .venv/bin/activate  # (Mac/Linux)
 
-# 3️⃣ Install dependencies
-python -m pip install --upgrade pip setuptools wheel
+# Install dependencies
 pip install -r requirements.txt
 
-# 4️⃣ Launch the app
+# Run the app
 streamlit run app.py
