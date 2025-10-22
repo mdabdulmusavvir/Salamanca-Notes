@@ -1,0 +1,37 @@
+Patient Name: John Doe
+Age: 46
+Sex: Male
+Date: 2025-10-21
+Physician: Dr. Maria Sanchez
+
+Chief Complaint:
+Patient reports persistent cough and mild shortness of breath for the past 2 weeks. Denies fever or chest pain.
+
+History of Present Illness:
+Cough started after a cold two weeks ago. Non-productive, occurs mostly at night. No history of smoking. Reports mild fatigue. Using OTC cough syrup with minimal relief.
+
+Past Medical History:
+Hypertension (controlled with lisinopril 10 mg daily)
+No diabetes, asthma, or COPD.
+
+Medications:
+Lisinopril 10 mg daily
+
+Allergies:
+No known drug allergies.
+
+Physical Examination:
+BP 128/82 mmHg, HR 76 bpm, Temp 98.4°F, RR 18/min, SpO2 96% RA.
+Lungs: Mild wheezing bilaterally, no crackles.
+Cardiac: Regular rate and rhythm, no murmurs.
+Abdomen: Soft, non-tender.
+Extremities: No edema.
+
+Assessment:
+Likely post-viral cough with mild bronchospasm. Differential includes mild reactive airway disease.
+
+Plan:
+- Continue lisinopril.
+- Start albuterol inhaler PRN for wheezing.
+- Encourage hydration and steam inhalation.
+- Follow-up in 2 weeks or sooner if symptoms worsen.
